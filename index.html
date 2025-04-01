@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Maze Challenge</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "youtube-player": "https://unpkg.com/youtube-player@5.6.0/dist/youtube-player.js"
+  }
+}
+</script>
+</head>
+<body>
+  <h1>The Maze to Unlimited Cake!</h1>
+  <p>Navigate the maze to claim your reward!</p>
+  <div id="maze-container">
+    <div id="player"></div>
+    <div id="goal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <rect x="10" y="50" width="80" height="40" rx="5" ry="5" fill="#8B4513" stroke="black" stroke-width="2"/>
+        <rect x="10" y="45" width="80" height="10" rx="5" ry="5" fill="#A0522D" stroke="black" stroke-width="2"/>
+        <rect x="45" y="55" width="10" height="10" fill="#FFD700" stroke="black" stroke-width="2"/>
+        <line x1="10" y1="50" x2="10" y2="90" stroke="#654321" stroke-width="2"/>
+        <line x1="90" y1="50" x2="90" y2="90" stroke="#654321" stroke-width="2"/>
+        <line x1="10" y1="90" x2="90" y2="90" stroke="#654321" stroke-width="2"/>
+        <line x1="10" y1="50" x2="90" y2="50" stroke="#654321" stroke-width="2"/>
+        <line x1="10" y1="45" x2="90" y2="45" stroke="#654321" stroke-width="2"/>
+        <line x1="10" y1="55" x2="90" y2="55" stroke="#654321" stroke-width="2"/>
+        <path d="M 20 45 C 20 35, 80 35, 80 45" fill="none" stroke="#A0522D" stroke-width="3"/>
+        <circle cx="50" cy="60" r="3" fill="#FFD700" filter="url(#glow)"/>
+      </svg>
+
+    </div>
+  </div>
+   <div id="youtube-player-container"></div>
+
+  <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
